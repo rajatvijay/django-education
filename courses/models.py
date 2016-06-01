@@ -40,6 +40,8 @@ class Module(models.Model):
 
 class Content(models.Model):
     module = models.ForeignKey(Module, related_name='contents')
+
+
     content_type = models.ForeignKey(ContentType,
                                      limit_choices_to={'model__in':('text',
                                                                     'video',
