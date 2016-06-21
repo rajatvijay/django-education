@@ -35,7 +35,7 @@ class Module(models.Model):
     course = models.ForeignKey(Course, related_name='modules')
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    order = OrderField(blank=True, for_fields=['courses'])
+    order = OrderField(blank=True, for_fields=['course'])
 
     class Meta:
         ordering = ['order']
