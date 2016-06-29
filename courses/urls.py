@@ -12,4 +12,7 @@ urlpatterns = [
         views.ContentCreateUpdateView.as_view(), name='module_content_create'),
     url(r'^module/(?P<module_id>\d+)/content/(?P<model_name>\w+)/(?P<id>\d+)/$',
         views.ContentCreateUpdateView.as_view(), name='module_content_update'),
+
+    url(r'^content/(?P<id>\d+)/delete/$',
+        views.ContentDeleteView.as_view(), name='module_content_delete'),
 ]
